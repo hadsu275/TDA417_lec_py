@@ -4,6 +4,11 @@ class Search:
         self.arr = []
         
     def addElement(self, elm):
+        if isinstance(elm, list):
+            self.arr.extend(elm)
+        else:
+            self.arr.append(elm)
+        
         self.arr.append(elm)
 
     def linear_search(self, target):
